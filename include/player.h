@@ -5,10 +5,11 @@
 
 #include <string>
 
-class Player: public Entity {
+class Player: public Entity 
+{
     public:
-        Player(std::string p_name, float p_health, float p_size);
-        void Move();
+        Player(std::string p_name, float p_health, float p_size, float p_speed);
+        void Move(float deltaTime);
 };
 
 #endif

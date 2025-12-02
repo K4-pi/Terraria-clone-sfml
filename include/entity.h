@@ -5,18 +5,20 @@
 
 #include <string>
 
-class Entity {
+class Entity 
+{
     protected:
         std::string e_name;
+        sf::CircleShape e_body;
         float e_health;
         float e_size;
-        sf::CircleShape e_body;
+        float e_speed;
 
     public:
-        Entity(std::string e_name, float e_health, float e_size);
+        Entity(std::string e_name, float e_health, float e_size, float e_speed);
+        sf::CircleShape getBody() const;
         void printInfo() const;
-        void init();
-        sf::CircleShape getBody();
+        float getSpeed() const;
 };
 
 #endif
